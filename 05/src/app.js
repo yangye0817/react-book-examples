@@ -18,3 +18,8 @@ ReactDOM.render((
     </div>
   </Provider>
 ), document.getElementById('root'));
+
+if (process.env.NODE_ENV !== 'production') {
+	const { reactopt } = require('reactopt');
+	reactopt(React);
+}
